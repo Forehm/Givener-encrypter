@@ -127,18 +127,16 @@ string Decrypt(string& message, string key)
 
 int main()
 {
-	setlocale(LC_ALL, "ru");
+	
 
-	
-	
 
 	while (true)
 	{
 		cout << endl;
 		cout << endl;
-		cout << "Чтобы зашифровать сообщение введите 1"s << endl;
-		cout << "Чтобы расшифровать сообщение введите 2"s << endl;
-		cout << "Чтобы выйти введите 3"s << endl;
+		cout << "print 1 to encrypt a message"s << endl;
+		cout << "print 2 to decrypt the message"s << endl;
+		cout << "print 3 to quit"s << endl;
 
 		int option = 0;
 		cin >> option;
@@ -148,12 +146,12 @@ int main()
 		case 1:
 		{
 			cin.ignore();
-			cout << "Введите сообщение"s << endl;
+			cout << "print your message"s << endl;
 			string message = ""s;
 			getline(cin, message);
 
 			cin.ignore();
-			cout << "Введите ключ-слово"s << endl;
+			cout << "print your keyword"s << endl;
 			string key;
 			cin >> key;
 
@@ -164,12 +162,12 @@ int main()
 		case 2:
 		{
 			cin.ignore();
-			cout << "Введите сообщение"s << endl;
+			cout << "print your message"s << endl;
 			string message = ""s;
 			getline(cin, message);
 
 			cin.ignore();
-			cout << "Введите ключ-слово"s << endl;
+			cout << "print your keyword"s << endl;
 			string key;
 			cin >> key;
 
@@ -178,13 +176,13 @@ int main()
 		}
 		case 3:
 		{
-			cout << "До свидания!"s << endl;
+			cout << "good bye!"s << endl;
 			return 0;
 			break;
 		}
 		default:
 		{
-			cout << "Я не знаю такого варианта"s << endl;
+			cout << "I don't know such an option"s << endl;
 			break;
 		}
 		}
