@@ -41,6 +41,15 @@ vector<string> square =
 
 string Encrypt(string& message, string key)
 {
+	
+	for (char& c : message)
+	{
+		if (c == ' ')
+		{
+			c = '_';
+		}
+	}
+	
 	string returning_message;
 	int first_index = 0;
 	int second_index = 0;
@@ -121,6 +130,15 @@ string Decrypt(string& message, string key)
 		++index_of_key;
 	}
 
+	
+	for (char& c : returning_message)
+	{
+		if (c == '_')
+		{
+			c = ' ';
+		}
+	}
+	
 	return returning_message;
 }
 
