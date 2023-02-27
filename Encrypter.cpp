@@ -9,35 +9,7 @@ using namespace std;
 string alphabet = "abcdefghijklmnopqrstuvwxyz_";
 
 
-vector<string> square =
-{   {"abcdefghijklmnopqrstuvwxyz_"s}, //1
-	{"bcdefghijklmnopqrstuvwxyz_a"s}, //2
-	{"cdefghijklmnopqrstuvwxyz_ab"s}, //3
-	{"defghijklmnopqrstuvwxyz_abc"s}, //4
-	{"efghijklmnopqrstuvwxyz_abcd"s}, //5
-	{"fghijklmnopqrstuvwxyz_abcde"s}, //6
-	{"ghijklmnopqrstuvwxyz_abcdef"s}, //7
-	{"hijklmnopqrstuvwxyz_abcdefg"s}, //8
-	{"ijklmnopqrstuvwxyz_abcdefgh"s}, //9
-	{"jklmnopqrstuvwxyz_abcdefghi"s}, //10
-	{"klmnopqrstuvwxyz_abcdefghij"s}, //11
-	{"lmnopqrstuvwxyz_abcdefghijk"s}, //12
-	{"mnopqrstuvwxyz_abcdefghijkl"s}, //13
-	{"nopqrstuvwxyz_abcdefghijklm"s}, //14
-	{"opqrstuvwxyz_abcdefghijklmn"s}, //15
-	{"pqrstuvwxyz_abcdefghijklmno"s}, //16
-	{"qrstuvwxyz_abcdefghijklmnop"s}, //17
-	{"rstuvwxyz_abcdefghijklmnopq"s}, //18
-	{"stuvwxyz_abcdefghijklmnopqr"s}, //19
-	{"tuvwxyz_abcdefghijklmnopqrs"s}, //20
-	{"uvwxyz_abcdefghijklmnopqrst"s}, //21
-	{"vwxyz_abcdefghijklmnopqrstu"s}, //22
-	{"wxyz_abcdefghijklmnopqrstuv"s}, //23
-	{"xyz_abcdefghijklmnopqrstuvw"s}, //24
-	{"yz_abcdefghijklmnopqrstuvwx"s}, //25
-	{"z_abcdefghijklmnopqrstuvwxy"s}, //26
-	{"_abcdefghijklmnopqrstuvwxyz"s}, //27
-};
+vector<string> square;
 
 string Encrypt(string& message, string key)
 {
@@ -142,10 +114,25 @@ string Decrypt(string& message, string key)
 	return returning_message;
 }
 
+void Fill_square(string alphabet_copy)
+{
+	square.push_back(alphabet_copy);
+
+	char last_symbol = alphabet_copy[alphabet_copy.size() - 1];
+
+	while (alphabet_copy[0] != last_symbol)
+	{
+		char symbol_to_shift = alphabet_copy[0];
+		auto it = alphabet_copy.begin();
+		alphabet_copy.erase(it);
+		alphabet_copy.push_back(symbol_to_shift);
+		square.push_back(alphabet_copy);
+	}
+}
 
 int main()
 {
-	
+	Fill_square(alphabet);
 
 
 	while (true)
