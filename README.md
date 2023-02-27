@@ -1,5 +1,5 @@
 # 27.02.2023 Update
-now I added a function that fills the Givener square, so that you can use anu symbols you want.
+now I added a function that fills the Givener square, so that you can use any symbols you want.
 You need just add them to the alphabet. Do not delete underscore from the alphabet and do not add there a space.
 Unfortunately you cannot use underscore, but it still saves yoy a lot of problems
 
