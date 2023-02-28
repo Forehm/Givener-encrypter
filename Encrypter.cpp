@@ -59,12 +59,28 @@ string Encrypt(string& message, string key)
 	}
 
 	
+	int number = (key.size() - 1) * 2;
+
+	for (int i = 0; i < number; ++i)
+	{
+		returning_message += alphabet[rand() % 89];
+	}
+	
 	return returning_message;
 
 }
 
 string Decrypt(string& message, string key)
 {
+	string new_msg = "";
+	int number = (key.size() - 1) * 2;
+
+	for (int i = 0; i < message.size() - number; ++i)
+	{
+		new_msg += message[i];
+	}
+	message = new_msg;
+	
 	string returning_message = "";
 	int first_index = 0;
 	int second_index = 0;
