@@ -1,3 +1,7 @@
+# 28.02.2023 Update
+I modified the functions of encrypting and decrypting. Now they add extra symbols to the encrypted message to
+hide the real size of the real message
+
 # 27.02.2023 Update
 now I added a function that fills the Givener square, so that you can use any symbols you want.
 You need just add them to the alphabet. Do not delete underscore from the alphabet and do not add there a space.
