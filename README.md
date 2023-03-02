@@ -1,5 +1,5 @@
 # 02.03.2023 Update
-I have added new symbols to the alphabet, and fixed some syntactic weaknesses.
+I have added new symbols to the alphabet(capital letters, numbers and special symbols), and fixed some syntactic weaknesses.
 
 # 28.02.2023 Update
 I modified the functions of encrypting and decrypting. Now they add extra symbols to the encrypted message to
