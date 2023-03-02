@@ -1,6 +1,8 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 #include <vector>
+#include <Windows.h>
+#include <ctime>
 
 using namespace std;
 
@@ -11,7 +13,7 @@ string alphabet = "abcdefghijklmnopqrstuvwxyz_123456789!,.?()[]{}:";
 
 vector<string> square;
 
-string Encrypt(string& message, string key)
+string Encrypt(string& message, const string& key)
 {
 	
 	for (char& c : message)
@@ -70,7 +72,7 @@ string Encrypt(string& message, string key)
 
 }
 
-string Decrypt(string& message, string key)
+string Decrypt(string& message, const string& key)
 {
 	string new_msg = "";
 	int number = (key.size() - 1) * 2;
