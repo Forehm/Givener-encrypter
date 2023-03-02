@@ -8,7 +8,7 @@ using namespace std;
 
 
 
-string alphabet = "abcdefghijklmnopqrstuvwxyz_123456789!,.?()[]{}:";
+string alphabet = "abcdefghijklmnopqrstuvwxyz_123456789!,.?()[]{}:QWERTYUIOPASDFGHJKLZXCVBNM";
 
 
 vector<string> square;
