@@ -6,7 +6,7 @@ using namespace std;
 
 
 
-string alphabet = "abcdefghijklmnopqrstuvwxyz_";
+string alphabet = "abcdefghijklmnopqrstuvwxyz_123456789!,.?()[]{}:";
 
 
 vector<string> square;
