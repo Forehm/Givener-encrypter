@@ -1,16 +1,8 @@
-#pragma comment(lib, "ws2_32.lib")
-#include <WinSock2.h>
 #include <iostream>
 #include <string>
 #include <vector>
-#pragma warning(disable: 4996)
 
 using namespace std;
-
-
-SOCKET Connection;
-
-string name;
 
 string key;
 
@@ -143,82 +135,15 @@ void Fill_square(string alphabet_copy)
 }
 
 
-void ClientHandler()
+
+int main()
 {
-	int msg_size;
-
-
-	while (true)
-	{
-		recv(Connection, (char*)&msg_size, sizeof(int), NULL);
-		char* msg = new char[msg_size + 1];
-		msg[msg_size] = '\0';
-		recv(Connection, msg, msg_size, NULL);
-		string a = msg;
-
-		std::cout << Decrypt(a, key) << std::endl;
-		delete[] msg;
-	}
-}
-
-int main(int argc, char* argv[])
-{
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-
-	setlocale(LC_ALL, "ru");
-
+	
 	Fill_square(alphabet);
 
-	string _ip;
-	cout << "Введи ip" << endl;
-	cin >> _ip;
-	const char* ip = _ip.c_str();
-
-	cout << "введи имя" << endl;
-	cin >> name;
-
-	cout << "Введите ключ" << endl;
+	cout << "Enter your key" << endl;
 	cin >> key;
 
-	WSAData wsaData;
-	WORD DLLVersion = MAKEWORD(2, 1);
-	if (WSAStartup(DLLVersion, &wsaData) != 0)
-	{
-		std::cout << "Error!" << std::endl;
-		exit(1);
-	}
-
-	SOCKADDR_IN addr;
-	int size_of_addr = sizeof(addr);
-	addr.sin_addr.s_addr = inet_addr(ip);
-	addr.sin_port = htons(1234);
-	addr.sin_family = AF_INET;
-
-
-	Connection = socket(AF_INET, SOCK_STREAM, NULL);
-	if (connect(Connection, (SOCKADDR*)&addr, sizeof(addr)) != 0) {
-		std::cout << "Error: failed connect to server" << std::endl;
-		return 1;
-	}
-	else {
-		std::cout << "Connected!" << std::endl;
-	}
-
-
-	CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)ClientHandler, NULL, NULL, NULL);
-
-	string msg1;
-	while (true)
-	{
-		getline(cin, msg1);
-		msg1 = name + ": " + msg1;
-		int msg_size = msg1.size();
-		send(Connection, (char*)&msg_size, sizeof(int), NULL);
-		send(Connection, Encrypt(msg1, key).c_str(), msg_size, NULL);
-		Sleep(10);
-	}
-
-	system("pause");
+	
 	return 0;
 }
