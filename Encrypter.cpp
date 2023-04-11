@@ -52,17 +52,11 @@ string Encrypt(string& message, string key)
 				second_index = i;
 			}
 		}
-
-
 		returning_message += square[first_index][second_index];
-
-
+		
 		++index_of_key;
 	}
-
-
 	return returning_message;
-
 }
 
 string Decrypt(string& message, string key)
@@ -113,7 +107,6 @@ string Decrypt(string& message, string key)
 			c = ' ';
 		}
 	}
-
 	return returning_message;
 }
 
