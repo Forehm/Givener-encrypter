@@ -4,7 +4,7 @@
 
 using namespace std;
 
-string key;
+string key ="";
 
 string alphabet = "qwertyuiopasdfghjklzxcvbnm_,.!():?-+=1234567890%*QWERTYUIOPASDFGHJKLZXCVBNM"s;
 
