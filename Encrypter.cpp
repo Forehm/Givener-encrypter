@@ -111,7 +111,7 @@ string Decrypt(string& message, string key)
 }
 
 
-void Fill_square(string alphabet_copy)
+void FillSquare(string alphabet_copy)
 {
 	square.push_back(alphabet_copy);
 
@@ -131,8 +131,7 @@ void Fill_square(string alphabet_copy)
 
 int main()
 {
-	
-	Fill_square(alphabet);
+	FillSquare(alphabet);
 
 	cout << "Enter your key" << endl;
 	cin >> key;
