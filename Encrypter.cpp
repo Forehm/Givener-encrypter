@@ -61,8 +61,6 @@ string Encrypt(string& message, string key)
 
 string Decrypt(string& message, string key)
 {
-
-
 	string returning_message = "";
 	int first_index = 0;
 	int second_index = 0;
@@ -133,9 +131,7 @@ int main()
 {
 	FillSquare(alphabet);
 
-	cout << "Enter your key" << endl;
-	cin >> key;
-
+	
 	
 	return 0;
 }
