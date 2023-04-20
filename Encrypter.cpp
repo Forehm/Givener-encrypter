@@ -28,7 +28,6 @@ string Encrypt(string& message, string key)
 	string returning_message;
 	int first_index = 0;
 	int second_index = 0;
-
 	int index_of_key = 0;
 
 	for (const char& c : message)
@@ -58,6 +57,7 @@ string Encrypt(string& message, string key)
 		
 		++index_of_key;
 	}
+	
 	return returning_message;
 }
 
@@ -106,6 +106,7 @@ string Decrypt(string& message, string key)
 			c = ' ';
 		}
 	}
+	
 	return returning_message;
 }
 
