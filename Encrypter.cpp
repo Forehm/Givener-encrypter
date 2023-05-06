@@ -133,7 +133,5 @@ int main()
 {
 	FillSquare(alphabet);
 
-	
-	
 	return 0;
 }
