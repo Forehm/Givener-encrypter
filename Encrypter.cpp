@@ -131,6 +131,5 @@ void FillSquare(string alphabet_copy)
 int main()
 {
 	FillSquare(alphabet);
-
 	return 0;
 }
