@@ -60,7 +60,7 @@ string Encrypt(string& message, string& key)
 	return returning_message;
 }
 
-string Decrypt(string& message, string key)
+string Decrypt(string& message, const string& key)
 {
 	string returning_message = "";
 	int first_index = 0;
