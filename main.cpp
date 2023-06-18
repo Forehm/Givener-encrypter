@@ -37,7 +37,7 @@ string Encrypt(string& message, const string& key)
 			index_of_key = 0;
 		}
 
-		for (int i = 0; i < alphabet.size(); ++i)
+		for (size_t i = 0; i < alphabet.size(); ++i)
 		{
 			if (alphabet[i] == c)
 			{
@@ -45,7 +45,7 @@ string Encrypt(string& message, const string& key)
 			}
 		}
 
-		for (int i = 0; i < alphabet.size(); ++i)
+		for (size_t i = 0; i < alphabet.size(); ++i)
 		{
 			if (square[0][i] == key[index_of_key])
 			{
@@ -76,7 +76,7 @@ string Decrypt(string& message, const string& key)
 		}
 
 
-		for (int i = 0; i < alphabet.size(); ++i)
+		for (size_t i = 0; i < alphabet.size(); ++i)
 		{
 			if (alphabet[i] == key[index_of_key])
 			{
@@ -86,7 +86,7 @@ string Decrypt(string& message, const string& key)
 
 		}
 
-		for (int i = 0; i < alphabet.size(); ++i)
+		for (size_t i = 0; i < alphabet.size(); ++i)
 		{
 			if (square[i][first_index] == c)
 			{
