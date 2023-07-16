@@ -25,7 +25,7 @@ string Encrypt(string& message, const string& key)
 		}
 	}
 
-	string returning_message = "";
+	std::string returning_message = "";
 	int first_index = 0;
 	int second_index = 0;
 	int index_of_key = 0;
