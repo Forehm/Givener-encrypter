@@ -12,6 +12,6 @@ there are several main parts in the program:
 # How to use
 1) Givener's square consists of alphabets that have different offset. So the user can change his own alphabet or use the default one.
 2) user has to invoke the function FillSquare() the parameter is an alphabet. So that the user fills the Givener's square and he is ready to encrypt.
-3) set an encryption key.
+3) set an encryption key with the help of s special function.
 4) invoke a function Encrypt(). first parameter is a message, the second one is a key. the function returns std::string (encrypted message)
 5) invoke a function Decrypt(). first parameter is a message, the second one is a key. the function returns std::string (decrypted message)
