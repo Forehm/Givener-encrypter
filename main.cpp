@@ -11,7 +11,7 @@ string key =""s;
 vector<string> square;
 
 
-string Encrypt(string& message, const string& key)
+string Encrypt(string message, const string& key)
 {
 	srand(time(NULL));
 
