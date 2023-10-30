@@ -7,7 +7,7 @@ using namespace std;
 
 
 string alphabet = "qwertyuiopasdfghjklzxcvbnm_,.!():?-+=1234567890%*QWERTYUIOPASDFGHJKLZXCVBNM"s;
-string key ="";
+string key =""s;
 vector<string> square;
 
 
