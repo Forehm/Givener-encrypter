@@ -129,7 +129,7 @@ void FillSquare(string alphabet_copy)
 
 int main()
 {
-	FillSquare(alphabet);//to start working, it is necessary
+	FillSquare(alphabet);//to start working, it is necessary to fill your 
 
 
 	return 0;
