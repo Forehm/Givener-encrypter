@@ -1,5 +1,5 @@
 # Givener-encrypter
-This program requires C++17 and x86
+### This program requires C++17 and x86
 
 To be simple and demonstrative this program has no classes and all functions are in the global namespace.
 there are several main parts in the program:
