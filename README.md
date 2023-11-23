@@ -3,8 +3,8 @@
 
 To be simple and demonstrative this program has no classes and all functions are in the global namespace.
 there are several main parts in the program:
-1)alphabet
 
+1)alphabet
 2)key
 
 3)square
