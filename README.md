@@ -4,9 +4,13 @@
 To be simple and demonstrative this program has no classes and all functions are in the global namespace.
 there are several main parts in the program:
 1)alphabet
+
 2)key
+
 3)square
+
 4)function Encrypt()
+
 5)function Decrypt()
 
 ### How to use
