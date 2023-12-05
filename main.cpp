@@ -133,6 +133,9 @@ int main()
 	
 	FillSquare(alphabet, square);//to start working, it is necessary to fill your alphaber square
 
+	std::cout << "write your key: "s << std::endl;
+	getline(std::cin, key);
+	
 	while(true)
 	{
 		int choice = 0;
@@ -148,17 +151,20 @@ int main()
 			case 1:
 			{
 				getline(std::cin, message);
-				std::cout << Decrypt(message, key, square, alphabet);
+				std::cout << Decrypt(message, key, square, alphabet) << std::endl;
+				break;
 			}
 			case 2:
 			{
 				getline(std::cin, message);
-				std::cout << Encrypt(message, key, square, alphabet);
+				std::cout << Encrypt(message, key, square, alphabet) << std::endl;
+				break;
 			}
 			case 3:
 			{
 				std::cout << "write new key: "s;
 				getline(std::cin, key);
+				break;
 			}
 		}
 	}
