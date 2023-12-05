@@ -6,12 +6,9 @@
 using namespace std;
 
 
-string alphabet = "qwertyuiopasdfghjklzxcvbnm_,.!():?-+=1234567890%*QWERTYUIOPASDFGHJKLZXCVBNM"s;
-string key =""s;
-vector<string> square;
 
 
-string Encrypt(string message, const string key)
+string Encrypt(string message, const string key, const vector<string>& square, const string& alphabet)
 {
 	srand(time(NULL));
 
@@ -50,16 +47,16 @@ string Encrypt(string message, const string key)
 				second_index = i;
 			}
 		}
-		
+
 		returning_message += square[first_index][second_index];
-		
+
 		++index_of_key;
 	}
-	
+
 	return returning_message;
 }
 
-string Decrypt(string& message, const string& key)
+string Decrypt(string& message, const string& key, const vector<string>& square, const string& alphabet)
 {
 	string returning_message = "";
 	int first_index = 0;
@@ -104,12 +101,12 @@ string Decrypt(string& message, const string& key)
 			c = ' ';
 		}
 	}
-	
+
 	return returning_message;
 }
 
 
-void FillSquare(string alphabet_copy)
+void FillSquare(string alphabet_copy, vector<string>& square)
 {
 	square.push_back(alphabet_copy);
 
@@ -129,8 +126,42 @@ void FillSquare(string alphabet_copy)
 
 int main()
 {
-	FillSquare(alphabet);//to start working, it is necessary to fill your alphaber square
+	string alphabet = "qwertyuiopasdfghjklzxcvbnm_,.!():?-+=1234567890%*QWERTYUIOPASDFGHJKLZXCVBNM"s;
+	string key = ""s;
+	vector<string> square;
+	string message;
+	
+	FillSquare(alphabet, square);//to start working, it is necessary to fill your alphaber square
 
+	while(true)
+	{
+		int choice = 0;
+
+		std::cout << "1 - decrypt"s << std::endl;
+		std::cout << "2 - encrypt"s << std::endl;
+		std::cout << "3 - change key"s << std::endl;
+		std::cout << "-1 - exit"s << std::endl;
+		std::cin >> choice;
+
+		switch (choice)
+		{
+			case 1:
+			{
+				getline(std::cin, message);
+				std::cout << Decrypt(message, key, square, alphabet);
+			}
+			case 2:
+			{
+				getline(std::cin, message);
+				std::cout << Encrypt(message, key, square, alphabet);
+			}
+			case 3:
+			{
+				std::cout << "write new key: "s;
+				getline(std::cin, key);
+			}
+		}
+	}
 
 	return 0;
 }
