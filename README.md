@@ -20,3 +20,5 @@ there are several main parts in the program:
 3) set an encryption key, it is a global variable.
 4) invoke a function Encrypt(). first parameter is a message, the second one is a key. the function returns std::string (encrypted message)
 5) invoke a function Decrypt(). first parameter is a message, the second one is a key. the function returns std::string (decrypted message)
+
+I decided to add some interface to the program in order to use it via Thermux
