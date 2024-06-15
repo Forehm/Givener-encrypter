@@ -120,7 +120,6 @@ void FillSquare(string alphabet_copy, vector<string>& square)
 }
 
 
-
 int main()
 {
 	string alphabet = "qwertyuiopasdfghjklzxcvbnm_,.!():?-+=1234567890%*QWERTYUIOPASDFGHJKLZXCVBNM"s;
