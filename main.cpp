@@ -10,6 +10,7 @@ string Encrypt(string message, const string key, const vector<string>& square, c
 {
 	srand(time(NULL));
 
+
 	for (char& c : message)
 	{
 		if (c == ' ')
