@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 string Encrypt(string message, const string key, const vector<string>& square, const string& alphabet)
 {
 	srand(time(NULL));
